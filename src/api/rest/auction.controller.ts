@@ -20,7 +20,7 @@ import { NewAuctionDTO } from './dtos/newAuction.dto';
 
 @Controller('auction')
 export class AuctionController {
-  constructor(private auctionService: AuctionService) {}
+  constructor(private auctionService:AuctionService) {}
 
   @Get()
   async findAll(): Promise<Auction[]> {

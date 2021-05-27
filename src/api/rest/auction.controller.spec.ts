@@ -23,9 +23,6 @@ describe('AuctionController', () => {
 
     controller = module.get<AuctionController>(AuctionController);
   });
-  it('should be defined', () => {
-    expect(controller).toBeDefined();
-  });
 
   it('should create a auction', () => {
     const newauction: NewAuctionDTO = {
@@ -35,7 +32,6 @@ describe('AuctionController', () => {
       endDate: Date.prototype,
       ownedByID: 'Carl',
     };
-
     expect(controller.createAuction(newauction)).toEqual(newauction);
     expect(mockAuctionService.createAuction).toHaveBeenCalledWith(newauction);
   });
